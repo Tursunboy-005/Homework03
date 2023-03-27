@@ -26,7 +26,7 @@
                 if (num4 < smallest) smallest = num4;
                 if (num4 > largest) largest = num4;
 
-                Console.WriteLine($"Result   {largest} , {smallest}");
+                Console.WriteLine($" Result  : {largest} , {smallest}");
 
         }
     }
