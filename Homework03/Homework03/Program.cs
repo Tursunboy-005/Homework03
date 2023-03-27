@@ -4,7 +4,11 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-        }
+            
+               Console.Write("Enter a decimal number: ");
+               int decimalNumber = int.Parse(Console.ReadLine());
+               Console.WriteLine("Binary representation: {0}", Convert.ToString(decimalNumber, 2));
+
+         }
     }
 }
