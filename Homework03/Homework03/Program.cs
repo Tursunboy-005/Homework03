@@ -4,7 +4,6 @@
     {
         static void Main(string[] args)
         {
-            int a = 0;
             Console.WriteLine("Hello, World!");
         }
     }
