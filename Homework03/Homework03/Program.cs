@@ -5,18 +5,18 @@
         static void Main(string[] args)
         {
          
-                int n, i;
+                int a, i;
                 double factorial = 1;
 
                 Console.Write("Enter a number: ");
-                n = int.Parse(Console.ReadLine());
+                a = int.Parse(Console.ReadLine());
 
-                for (i = 1; i <= n; ++i)
+                for (i = 1; i <= a; ++i)
                 {
                     factorial *=  i;
                 }
 
-                Console.WriteLine("Factorial of {0} = {1}", n, factorial);
+                Console.WriteLine("Factorial of {0} = {1}", a, factorial);
                 Main(args);
              
         }
