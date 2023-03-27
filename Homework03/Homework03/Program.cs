@@ -4,8 +4,22 @@
     {
         static void Main(string[] args)
         {
-            int a = 0; int b = 0;
-            Console.WriteLine("Hello, World!");
+         
+                int n, i;
+                double factorial = 1;
+
+                Console.Write("Enter a number: ");
+                n = int.Parse(Console.ReadLine());
+
+                for (i = 1; i <= n; ++i)
+                {
+                    factorial *=  i;
+                }
+
+                Console.WriteLine("Factorial of {0} = {1}", n, factorial);
+                Main(args);
+             
         }
-    }
-}
+     }
+ }
+
