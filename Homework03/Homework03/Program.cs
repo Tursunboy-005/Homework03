@@ -26,8 +26,8 @@
                 if (num4 < smallest) smallest = num4;
                 if (num4 > largest) largest = num4;
 
-                Console.WriteLine($" Result  : {largest - smallest}");
-
+                Console.WriteLine($" largest one is {largest} and smallest one is {smallest}  difference : {largest - smallest}");
+                Main(args);
         }
     }
 }
