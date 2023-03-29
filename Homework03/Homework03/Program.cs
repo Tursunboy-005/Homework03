@@ -4,29 +4,31 @@
     {
         static void Main(string[] args)
         {
-           
-                int num1, num2, num3, num4;
-                int smallest, largest;
 
-                Console.WriteLine("Enter four integers:");
-                num1 = int.Parse(Console.ReadLine());
-                num2 = int.Parse(Console.ReadLine());
-                num3 = int.Parse(Console.ReadLine());
-                num4 = int.Parse(Console.ReadLine());
+            int input, butunson = int.MaxValue, maxCount = 0, count = 0, qiymat = 0;
+            do
+            {
+                Console.Write("butun son kiriting : ");
+                input = int.Parse(Console.ReadLine());
 
-                smallest = num1;
-                largest = num1;
+                if (butunson == input)
+                {
+                    count++;
+                }
+                else
+                {
+                    if (count > maxCount)
+                    {
+                        maxCount = count;
+                        qiymat = butunson;
+                    }
+                    count = 1;
+                    butunson = input;
+                }
+            } while (count != 0);
+                Console.WriteLine("Bir birini takrorlaydigan sonlar uchun eng uzuni : ");
 
-                if (num2 < smallest) smallest = num2;
-                if (num2 > largest) largest = num2;
-
-                if (num3 < smallest) smallest = num3;
-                if (num3 > largest) largest = num3;
-
-                if (num4 < smallest) smallest = num4;
-                if (num4 > largest) largest = num4;
-
-                Console.WriteLine($" Result  : {largest - smallest}");
+            
 
         }
     }
