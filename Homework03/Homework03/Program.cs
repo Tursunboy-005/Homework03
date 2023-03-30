@@ -1,31 +1,22 @@
-﻿namespace Homework03
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace Homework03
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int number1, number2;
-            Console.Write("Enter firstnumber : ");
-            number1 = int.Parse(Console.ReadLine());
-            Console.Write("Enter secondnumber : ");
-            number2 = int.Parse(Console.ReadLine());
+            int input, first = 0, second = 1, third = 0;
+            Console.Write("Enter number : ");
+            input = Convert.ToInt32(Console.ReadLine());
+            Console.Write("First{0} Fibonacci numbers {1} {2} ", input, first, second);
 
-            for(int i = number1; i <= number2; i++)
+            for(int i = 3; i <= input; i++)
             {
-                int sum = 0;
-
-                for(int j = 1; j < i; j++)
-                {
-                    if(i%j == 0)
-                    {
-                        sum += j;
-                    }
-                }
-                if(sum == i)
-                {
-                    Console.WriteLine($"{i} is perfect number");
-                }
-
+                third = first + second;
+                Console.Write("{0} ", third);
+                first = second;
+                second = third;
             }
         }
     }
