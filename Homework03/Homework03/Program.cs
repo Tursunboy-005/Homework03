@@ -4,15 +4,13 @@
     {
         static void Main(string[] args)
         {
-           
-               for(int i = 0; i < 10; i++)
+            int input, a;
+            Console.Write(" Enter an integer number : ");
+            input = int.Parse(Console.ReadLine());    
+
+            for (int i = input; i <= 100; i++)
             {
-                for (int j = 0; j <= 10; j++)
-                {
-                    Console.WriteLine($" {i} x {j} = {i * j} ");
-                }
-                Console.WriteLine();
-                Console.WriteLine();
+                Console.WriteLine(i);
             }
 
         }
