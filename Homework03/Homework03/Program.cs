@@ -4,15 +4,29 @@
     {
         static void Main(string[] args)
         {
-            int input, a;
-            Console.Write(" Enter an integer number : ");
-            input = int.Parse(Console.ReadLine());    
+            int number1, number2;
+            Console.Write("Enter firstnumber : ");
+            number1 = int.Parse(Console.ReadLine());
+            Console.Write("Enter secondnumber : ");
+            number2 = int.Parse(Console.ReadLine());
 
-            for (int i = input; i <= 100; i++)
+            for(int i = number1; i <= number2; i++)
             {
-                Console.WriteLine(i);
-            }
+                int sum = 0;
 
+                for(int j = 1; j < i; j++)
+                {
+                    if(i%j == 0)
+                    {
+                        sum += j;
+                    }
+                }
+                if(sum == i)
+                {
+                    Console.WriteLine($"{i} is perfect number");
+                }
+
+            }
         }
     }
 }
